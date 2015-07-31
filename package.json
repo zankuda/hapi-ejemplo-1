@@ -1,0 +1,28 @@
+{
+  "name": "hapi-ejemplo-1",
+  "version": "1.0.0",
+  "description": "Ejemplo simple de servidor de servicios usando Hapi.js, desarrollado por [Zankuda](https://www.zankuda.com)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "NODE_ENV='test' ./node_modules/lab/bin/lab -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zankuda/hapi-ejemplo-1.git"
+  },
+  "keywords": [
+    "hapi",
+    "nodejs",
+    "microservices"
+  ],
+  "author": "Zankuda",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zankuda/hapi-ejemplo-1/issues"
+  },
+  "homepage": "https://github.com/zankuda/hapi-ejemplo-1#readme",
+  "dependencies": {
+    "hapi": "^8.8.1"
+  }
+}
