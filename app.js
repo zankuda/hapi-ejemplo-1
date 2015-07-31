@@ -15,7 +15,7 @@ server.start(function () {
 });
 
 if (module.parent) {
-  log.info("Llamada de ejecución como módulo")
+  console.log("Llamada de ejecución como módulo")
   module.exports = server
 }
 
