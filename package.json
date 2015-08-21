@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV='test' ./node_modules/lab/bin/lab -c"
+    "test": "NODE_ENV='test' ./node_modules/lab/bin/lab -c",
+    "test-tap": "./node_modules/lab/bin/lab -c -r tap > reports/testing.tap",
+    "test-clover": "./node_modules/lab/bin/lab -c -r clover > reports/clover.xml"
   },
   "repository": {
     "type": "git",
