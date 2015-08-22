@@ -28,5 +28,8 @@
     "code": "^1.5.0",
     "hapi": "^8.8.1",
     "lab": "^5.14.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
   }
 }
