@@ -1,0 +1,11 @@
+{
+  "asi": true,        // Elimina obligatoriedad de terminar las líneas con punto y coma.
+  "curly": true,      // Obliga a colocar paréntesis alrededor de las condiciones (if) y ciclos (while y for).
+  "funcscope": true,  // Esta opción ignora las advertencias de declaración de variables fuera del scope actual.
+  "maxdepth": 5,      // Máxima cantidad de bloques anidados, tanto condiciones como ciclos.
+  "maxparams": 4,     // Máxima cantidad de parámetros permitidos para la definición de funciones.
+  "unused": true      // Advierte de variables no utilizadas, pero sí definidas en nuestro código.
+}
+
+
+
