@@ -7,7 +7,8 @@
     "start": "node app.js",
     "test": "NODE_ENV='test' ./node_modules/lab/bin/lab -c",
     "test-tap": "./node_modules/lab/bin/lab -c -r tap > reports/testing.tap",
-    "test-clover": "./node_modules/lab/bin/lab -c -r clover > reports/clover.xml"
+    "test-clover": "./node_modules/lab/bin/lab -c -r clover > reports/clover.xml",
+    "test-checkstyle": "./node_modules/jshint/bin/jshint --reporter=checkstyle app.js config.js > reports/checkstyle-result.xml"
   },
   "repository": {
     "type": "git",
