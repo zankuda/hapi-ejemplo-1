@@ -11,11 +11,15 @@ var routes = require('./routes')
 routes.init(server, config)
 
 server.start(function () {
-  console.log('Servidor ejecutándose en:', server.info.uri);
+  if (process.env.NODE_ENV != 'test') {
+    console.log('Servidor ejecutándose en:', server.info.uri);
+  }
 });
 
 if (module.parent) {
-  console.log("Llamada de ejecución como módulo")
+  if (process.env.NODE_ENV != 'test') {
+    console.log("Llamada de ejecución como módulo")
+  }
   module.exports = server
 }
 
