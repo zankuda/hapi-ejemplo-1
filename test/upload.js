@@ -43,6 +43,10 @@ lab.experiment('Add new invoice from one client', function() {
       var result = response.result
       code.expect(response.statusCode).to.equal(200)
       code.expect(result.statusCode).to.equal(0)
+      code.expect(result.file).to.be.an.object()
+      code.expect(result.file.name).to.be.an.string()
+      code.expect(result.file.contentType).to.be.an.string()
+      code.expect(result.file.length).to.be.an.number()
       done()
     })
   })
