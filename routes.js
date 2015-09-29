@@ -20,5 +20,47 @@ exports.init = function (server) {
       })
     }
   })
+
+  server.route({
+    method: 'POST',
+    path: '/upload',
+    config: {
+      payload: {
+        output: 'file',
+        maxBytes: 1048576 * 10, // 10MB,
+        parse: true,
+        allow: 'multipart/form-data'
+      }
+    },
+    handler: function (request, reply) {
+      // Administración de flujo de archivos
+      var fs = require('fs')
+      // Funciones de manejo de rutas de arhcivos
+      var path = require('path')
+      if (request.payload.file) {
+        var file = {
+          name: request.payload.file.filename,
+          contentType: request.payload.file.headers['content-type'],
+          length: request.payload.file.bytes
+        }
+        fs.rename(request.payload.file.path, path.join(__dirname, '/upload/' + file.name), function(err) {
+          if (err) {
+            reply({
+              statusCode: 100,
+              mensaje: 'Error al guardar el archivo enviado...'
+            })
+          }
+          else {
+            reply({
+              statusCode: 0,
+              mensaje: 'Archivo recibido',
+              file: file
+            })
+          }
+        })
+      }
+    }
+  })
+
 }
 
