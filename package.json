@@ -28,7 +28,8 @@
   "dependencies": {
     "code": "^1.5.0",
     "hapi": "^10.1.0",
-    "lab": "^6.1.0"
+    "lab": "^6.1.0",
+    "rand-token": "^0.2.1"
   },
   "devDependencies": {
     "jshint": "^2.8.0"
